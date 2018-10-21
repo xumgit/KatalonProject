@@ -14,6 +14,8 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+import customerPackage.MySelectors
+
 WebUI.openBrowser('')
 
 WebUI.maximizeWindow()
@@ -23,8 +25,13 @@ WebUI.navigateToUrl('http://www.baidu.com')
 WebUI.waitForPageLoad(10)
 
 String dynamicId = 'kw'
-String xpath = '//input[@id="' + dynamicId + '"]'
-TestObject to = new TestObject("objectName")
-to.addProperty("xpath", ConditionType.EQUALS, xpath)
+//String xpath = '//input[@id="' + dynamicId + '"]'
+//TestObject to = new TestObject("objectName")
+//to.addProperty("xpath", ConditionType.EQUALS, xpath)
+
+String xpath = String.format(MySelectors.dynamicIdPath, dynamicId)
+TestObject to = MySelectors.getMyTestObject('xpath', xpath)
 
 WebUI.setText(to, 'baidu')
+
+//WebUI.closeBrowser()
