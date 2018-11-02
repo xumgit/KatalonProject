@@ -13,14 +13,20 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
  */
 public class GlobalVariable {
      
+    /**
+     * <p></p>
+     */
+    public static Object url
+     
 
     static {
         def allVariables = [:]        
-        allVariables.put('default', [:])
+        allVariables.put('default', ['url' : 'C:\\\\eclipse\\\\KatalonProject\\\\firstKatalon\\\\testHtml\\\\test.html'])
         
         String profileName = RunConfiguration.getExecutionProfile()
         
         def selectedVariables = allVariables[profileName]
+        url = selectedVariables['url']
         
     }
 }
