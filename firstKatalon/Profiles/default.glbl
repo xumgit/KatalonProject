@@ -9,4 +9,14 @@
       <initValue>'C:\\\\eclipse\\\\KatalonProject\\\\firstKatalon\\\\testHtml\\\\test.html'</initValue>
       <name>url</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Users\\\\apple\\\\Desktop\\\\codeReview\\\\KatalonProject\\\\firstKatalon\\\\testHtml\\\\test.html'</initValue>
+      <name>macurl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://localhost:8080/angularjs/deletedata'</initValue>
+      <name>testAPI1</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

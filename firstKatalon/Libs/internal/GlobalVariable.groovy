@@ -18,15 +18,27 @@ public class GlobalVariable {
      */
     public static Object url
      
+    /**
+     * <p></p>
+     */
+    public static Object macurl
+     
+    /**
+     * <p></p>
+     */
+    public static Object testAPI1
+     
 
     static {
         def allVariables = [:]        
-        allVariables.put('default', ['url' : 'C:\\\\eclipse\\\\KatalonProject\\\\firstKatalon\\\\testHtml\\\\test.html'])
+        allVariables.put('default', ['url' : 'C:\\\\eclipse\\\\KatalonProject\\\\firstKatalon\\\\testHtml\\\\test.html', 'macurl' : 'Users\\\\apple\\\\Desktop\\\\codeReview\\\\KatalonProject\\\\firstKatalon\\\\testHtml\\\\test.html', 'testAPI1' : 'http://localhost:8080/angularjs/deletedata'])
         
         String profileName = RunConfiguration.getExecutionProfile()
         
         def selectedVariables = allVariables[profileName]
         url = selectedVariables['url']
+        macurl = selectedVariables['macurl']
+        testAPI1 = selectedVariables['testAPI1']
         
     }
 }
