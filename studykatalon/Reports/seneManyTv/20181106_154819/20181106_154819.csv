@@ -1,0 +1,65 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+seneManyTv,,,2018-11-06 15:48:22,2018-11-06 15:48:43,21.061s,PASSED
+,,,,,,
+Test Cases/sendTvdiscoveryMany,,,2018-11-06 15:48:22,2018-11-06 15:48:43,20.563s,PASSED
+"Statement - endpoint = ""http://"" + cmndIpAddress + "":8080/SmartInstall/webservices.jsp""",,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.013s,PASSED
+"Statement - requestMethod = ""POST""",,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.003s,PASSED
+"Statement - authHeader = ""whateverYouNeedForAuthentication""",,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.007s,PASSED
+"Statement - header1 = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, authHeader)",,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.009s,PASSED
+"Statement - header2 = new com.kms.katalon.core.testobject.TestObjectProperty(Content-Type, com.kms.katalon.core.testobject.ConditionType.EQUALS, application/json)",,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.003s,PASSED
+"Statement - header3 = new com.kms.katalon.core.testobject.TestObjectProperty(Accept, com.kms.katalon.core.testobject.ConditionType.EQUALS, application/json)",,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.003s,PASSED
+"Statement - defaultHeaders = java.util.Arrays.asList(header1, header2, header3)",,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.010s,PASSED
+"Statement - tvResponse1 = ""{""CommandDetails"":{""TVDiscoveryParameters"":{""PowerStatus"":""On"",""TVIPAddress"":""",,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.004s,PASSED
+"Statement - tvResponse2 = "",""TVModelNumber"":""32HFL5011T/12"",""TVRoomID"":""",,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.045s,PASSED
+"Statement - tvResponse3 = "",""VSecureTVID"":""80F4F91""},""WebServiceParameters"":{""PollingFrequency"":10,""TVUniqueID"":""",,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.008s,PASSED
+"Statement - tvResponse4 = ""}},""CmdType"":""Response"",""Cookie"":293,""Fun"":""TVDiscoveryService"",""Svc"":""WebServices"",""SvcVer"":""3.0""}""",,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.002s,PASSED
+Statement - ro = new com.kms.katalon.core.testobject.RestRequestObjectBuilder().withRestUrl(endpoint).withHttpHeaders(defaultHeaders).withRestRequestMethod(requestMethod).build(),,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.010s,PASSED
+Statement - For (def index : (1..internal.GlobalVariable.tvDiscoveryCount)),,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.032s,PASSED
+"Statement - tvRoomId = """"00000""""",,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.004s,PASSED
+Statement - If (index > 0 && index < 10),,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.005s,PASSED
+Statement - return tvRoomId,,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.010s,PASSED
+"Statement - macAddress = "",""TVMACAddress"":""1C:5A:6B:B5:C5:7F""""",,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.006s,PASSED
+Statement - If (index > 0 && index < 10),,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.003s,PASSED
+Statement - return macAddress,,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.005s,PASSED
+"Statement - tvSerialNumber = "",""TVSerialNumber"":""FZ1A16140605"" + index + """"""",,,2018-11-06 15:48:23,2018-11-06 15:48:23,0.001s,PASSED
+Statement - return tvSerialNumber,,,2018-11-06 15:48:23,2018-11-06 15:48:27,3.790s,PASSED
+"Statement - tvRoomId = """"00000""""",,,2018-11-06 15:48:27,2018-11-06 15:48:27,0.001s,PASSED
+Statement - If (index > 0 && index < 10),,,2018-11-06 15:48:27,2018-11-06 15:48:27,0.003s,PASSED
+Statement - return tvRoomId,,,2018-11-06 15:48:27,2018-11-06 15:48:27,0.005s,PASSED
+"Statement - macAddress = "",""TVMACAddress"":""1C:5A:6B:B5:C5:7F""""",,,2018-11-06 15:48:27,2018-11-06 15:48:27,0.001s,PASSED
+Statement - If (index > 0 && index < 10),,,2018-11-06 15:48:27,2018-11-06 15:48:27,0.004s,PASSED
+Statement - return macAddress,,,2018-11-06 15:48:27,2018-11-06 15:48:27,0.001s,PASSED
+"Statement - tvSerialNumber = "",""TVSerialNumber"":""FZ1A16140605"" + index + """"""",,,2018-11-06 15:48:27,2018-11-06 15:48:27,0.000s,PASSED
+Statement - return tvSerialNumber,,,2018-11-06 15:48:27,2018-11-06 15:48:30,3.147s,PASSED
+"Statement - tvRoomId = """"00000""""",,,2018-11-06 15:48:30,2018-11-06 15:48:30,0.000s,PASSED
+Statement - If (index > 0 && index < 10),,,2018-11-06 15:48:30,2018-11-06 15:48:30,0.001s,PASSED
+Statement - return tvRoomId,,,2018-11-06 15:48:30,2018-11-06 15:48:30,0.003s,PASSED
+"Statement - macAddress = "",""TVMACAddress"":""1C:5A:6B:B5:C5:7F""""",,,2018-11-06 15:48:30,2018-11-06 15:48:30,0.001s,PASSED
+Statement - If (index > 0 && index < 10),,,2018-11-06 15:48:30,2018-11-06 15:48:30,0.001s,PASSED
+Statement - return macAddress,,,2018-11-06 15:48:30,2018-11-06 15:48:30,0.001s,PASSED
+"Statement - tvSerialNumber = "",""TVSerialNumber"":""FZ1A16140605"" + index + """"""",,,2018-11-06 15:48:30,2018-11-06 15:48:30,0.000s,PASSED
+Statement - return tvSerialNumber,,,2018-11-06 15:48:30,2018-11-06 15:48:33,3.219s,PASSED
+"Statement - tvRoomId = """"00000""""",,,2018-11-06 15:48:33,2018-11-06 15:48:33,0.001s,PASSED
+Statement - If (index > 0 && index < 10),,,2018-11-06 15:48:33,2018-11-06 15:48:33,0.002s,PASSED
+Statement - return tvRoomId,,,2018-11-06 15:48:33,2018-11-06 15:48:33,0.004s,PASSED
+"Statement - macAddress = "",""TVMACAddress"":""1C:5A:6B:B5:C5:7F""""",,,2018-11-06 15:48:33,2018-11-06 15:48:33,0.001s,PASSED
+Statement - If (index > 0 && index < 10),,,2018-11-06 15:48:33,2018-11-06 15:48:33,0.001s,PASSED
+Statement - return macAddress,,,2018-11-06 15:48:33,2018-11-06 15:48:33,0.000s,PASSED
+"Statement - tvSerialNumber = "",""TVSerialNumber"":""FZ1A16140605"" + index + """"""",,,2018-11-06 15:48:33,2018-11-06 15:48:33,0.001s,PASSED
+Statement - return tvSerialNumber,,,2018-11-06 15:48:33,2018-11-06 15:48:36,3.185s,PASSED
+"Statement - tvRoomId = """"00000""""",,,2018-11-06 15:48:36,2018-11-06 15:48:36,0.002s,PASSED
+Statement - If (index > 0 && index < 10),,,2018-11-06 15:48:36,2018-11-06 15:48:36,0.001s,PASSED
+Statement - return tvRoomId,,,2018-11-06 15:48:36,2018-11-06 15:48:36,0.002s,PASSED
+"Statement - macAddress = "",""TVMACAddress"":""1C:5A:6B:B5:C5:7F""""",,,2018-11-06 15:48:36,2018-11-06 15:48:36,0.000s,PASSED
+Statement - If (index > 0 && index < 10),,,2018-11-06 15:48:36,2018-11-06 15:48:36,0.001s,PASSED
+Statement - return macAddress,,,2018-11-06 15:48:36,2018-11-06 15:48:36,0.000s,PASSED
+"Statement - tvSerialNumber = "",""TVSerialNumber"":""FZ1A16140605"" + index + """"""",,,2018-11-06 15:48:36,2018-11-06 15:48:36,0.000s,PASSED
+Statement - return tvSerialNumber,,,2018-11-06 15:48:36,2018-11-06 15:48:40,3.111s,PASSED
+"Statement - tvRoomId = """"00000""""",,,2018-11-06 15:48:40,2018-11-06 15:48:40,0.001s,PASSED
+Statement - If (index > 0 && index < 10),,,2018-11-06 15:48:40,2018-11-06 15:48:40,0.001s,PASSED
+Statement - return tvRoomId,,,2018-11-06 15:48:40,2018-11-06 15:48:40,0.002s,PASSED
+"Statement - macAddress = "",""TVMACAddress"":""1C:5A:6B:B5:C5:7F""""",,,2018-11-06 15:48:40,2018-11-06 15:48:40,0.000s,PASSED
+Statement - If (index > 0 && index < 10),,,2018-11-06 15:48:40,2018-11-06 15:48:40,0.001s,PASSED
+Statement - return macAddress,,,2018-11-06 15:48:40,2018-11-06 15:48:40,0.000s,PASSED
+"Statement - tvSerialNumber = "",""TVSerialNumber"":""FZ1A16140605"" + index + """"""",,,2018-11-06 15:48:40,2018-11-06 15:48:40,0.001s,PASSED
+Statement - return tvSerialNumber,,,2018-11-06 15:48:40,2018-11-06 15:48:43,3.276s,PASSED

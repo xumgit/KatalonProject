@@ -50,7 +50,7 @@ for (def index : (1..GlobalVariable.tvDiscoveryCount)) {
 
     tvRoomId = checkRoomId(index)
 
-    tvUniqueID = (('"FZ1A' + index) + '1C5A6BB5C57F"')
+    tvUniqueID = (('"TEST' + index) + '1C5A6BB5C57F"')
 
     tvDiscovery = (tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId 
 		+ generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4)
@@ -93,9 +93,9 @@ String generateMac(Integer index) {
 	if (index > 0 && index < 10) {
 		macAddress = ",\"TVMACAddress\":\"" + index + "C:5A:6B:B5:C5:7F\""
 	} else if (index >= 10 && index < 100) {
-		macAddress = ",\"TVMACAddress\":\"1C:" + index/10 + "A:6B:B5:C5:7F\""
+		macAddress = ",\"TVMACAddress\":\"1C:" + index%10 + "A:6B:B5:C5:7F\""
 	} else if (index >= 100 && index < 1000) {
-		macAddress = ",\"TVMACAddress\":\"1C:5A:" + index/1000 + "B:B5:C5:7F\""
+		macAddress = ",\"TVMACAddress\":\"1C:5A:" + index%100 + "B:B5:C5:7F\""
 	}
 	return macAddress
 }

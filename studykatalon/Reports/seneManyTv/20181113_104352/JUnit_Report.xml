@@ -1,0 +1,3012 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="seneManyTv" time="96" tests="1" failures="0" errors="0">
+   <testsuite name="seneManyTv" tests="1" failures="0" errors="0" time="96" timestamp="2018-11-13 10:43:54" hostname="TPV - TPV-PC" id="Test Suites/seneManyTv">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\eclipse\\KatalonProject\\studykatalon\\Reports\\seneManyTv\\20181113_104352"/>
+         <property name="logFiles" value="C:\\eclipse\\KatalonProject\\studykatalon\\Reports\\seneManyTv\\20181113_104352\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="TPV - TPV-PC"/>
+         <property name="hostAddress" value="10.0.23.7"/>
+         <property name="os" value="Windows 7 64bit"/>
+         <property name="katalonVersion" value="5.8.6.1"/>
+      </properties>
+      <testcase name="Test Cases/sendTvdiscoveryMany" classname="Test Cases/sendTvdiscoveryMany" status="PASSED">
+         <system-out><![CDATA[2018-11-13 10:43:55 - [TEST_CASE][PASSED] - Test Cases/sendTvdiscoveryMany: Test Cases/sendTvdiscoveryMany
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - endpoint = "http://" + cmndIpAddress + ":8080/SmartInstall/webservices.jsp": null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - requestMethod = "POST": null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - authHeader = "whateverYouNeedForAuthentication": null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - header1 = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, authHeader): null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - header2 = new com.kms.katalon.core.testobject.TestObjectProperty(Content-Type, com.kms.katalon.core.testobject.ConditionType.EQUALS, application/json): null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - header3 = new com.kms.katalon.core.testobject.TestObjectProperty(Accept, com.kms.katalon.core.testobject.ConditionType.EQUALS, application/json): null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - defaultHeaders = java.util.Arrays.asList(header1, header2, header3): null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - tvResponse1 = "{"CommandDetails":{"TVDiscoveryParameters":{"PowerStatus":"On","TVIPAddress":": null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - tvResponse2 = ","TVModelNumber":"32HFL5011T/12","TVRoomID":": null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - tvResponse3 = ","VSecureTVID":"80F4F91"},"WebServiceParameters":{"PollingFrequency":10,"TVUniqueID":": null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - tvResponse4 = "}},"CmdType":"Response","Cookie":293,"Fun":"TVDiscoveryService","Svc":"WebServices","SvcVer":"3.0"}": null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - ro = new com.kms.katalon.core.testobject.RestRequestObjectBuilder().withRestUrl(endpoint).withHttpHeaders(defaultHeaders).withRestRequestMethod(requestMethod).build(): null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - For (def index : (1..internal.GlobalVariable.tvDiscoveryCount)): null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""0000" + index + """: null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"" + index + "C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:43:56 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:43:56 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:43:57 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""0000" + index + """: null
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"" + index + "C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:43:57 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:43:59 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:43:59 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:43:59 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:43:59 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:00 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""0000" + index + """: null
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"" + index + "C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:00 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:02 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:02 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:02 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:02 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:03 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:03 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:03 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:03 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:03 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:03 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:03 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""0000" + index + """: null
+
+2018-11-13 10:44:03 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:03 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:03 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:03 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:03 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:03 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"" + index + "C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:03 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:03 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:03 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:03 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:03 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:04 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:04 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:04 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:04 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:04 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:05 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""0000" + index + """: null
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"" + index + "C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:05 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:06 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:06 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:06 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:06 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:07 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""0000" + index + """: null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"" + index + "C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:07 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:07 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:08 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""0000" + index + """: null
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"" + index + "C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:08 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:09 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:09 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:09 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:09 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:10 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""0000" + index + """: null
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"" + index + "C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:10 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:11 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:11 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:11 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:11 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:12 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""0000" + index + """: null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"" + index + "C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:12 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:12 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:13 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:13 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:13 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:14 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:14 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:15 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:15 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:15 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:15 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:16 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:16 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:16 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:17 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:17 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:18 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:18 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:18 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:18 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:19 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:19 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:20 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:20 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:20 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:20 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:20 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:21 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:21 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:22 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:22 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:22 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:22 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:23 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:23 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:24 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:24 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:24 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:24 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:25 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:25 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:25 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:26 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:26 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:27 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:27 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:27 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:27 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:28 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:28 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:28 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:29 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:29 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:30 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:30 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:30 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:30 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:31 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:31 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:31 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:32 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:32 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:32 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:32 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:32 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:32 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:32 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:32 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:32 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:33 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:33 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:33 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:33 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:33 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:33 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:33 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:33 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:33 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:33 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:33 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:33 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:34 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:34 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:34 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:34 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:35 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:35 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:35 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:36 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:36 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:36 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:37 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:37 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:37 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:39 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:39 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:39 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:40 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:40 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:41 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:41 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:41 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:41 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:42 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:42 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:42 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:43 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:43 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:43 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:44 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:44 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:45 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:45 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:45 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:45 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:47 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:47 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:47 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:48 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:48 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:48 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:49 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:49 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:49 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:50 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:50 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:51 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:51 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:51 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:51 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:52 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:52 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:52 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:53 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:53 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:54 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:54 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:54 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:54 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:55 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:55 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:56 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:56 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:56 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:56 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:57 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:57 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:57 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:58 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:44:58 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:44:58 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:44:59 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:44:59 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:00 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:00 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:00 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:00 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:01 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:01 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:01 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:02 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:02 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:03 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:03 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:03 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:03 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:04 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:04 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:04 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:05 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:05 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:06 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:06 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:06 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:06 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:07 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:07 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:07 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:08 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:08 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:08 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:09 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:09 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:09 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:10 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:10 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:11 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:11 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:11 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:11 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:12 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:12 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:12 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:13 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:13 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:13 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:14 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:14 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:15 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:15 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:15 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:15 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:16 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:16 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:16 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:17 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:17 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:18 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:18 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:18 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:18 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:19 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:19 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:19 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:20 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:20 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:22 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:22 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:22 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:22 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:23 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:23 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:24 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:24 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:24 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:24 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:25 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:25 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:25 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:26 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:26 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:27 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:27 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:27 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:27 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:28 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:28 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:28 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:29 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvResponse1: null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - tvIp = """ + "10.0.23." + index + """: null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - tvRoomId = checkRoomId(index): null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""00000"": null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - tvRoomId = ""000" + index + """: null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - return tvRoomId: null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - tvUniqueID = ""TEST" + index + "1C5A6BB5C57F"": null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - tvDiscovery = tvDiscovery + tvIp + generateMac(index) + tvResponse2 + tvRoomId + generateSnNumber(index) + tvResponse3 + tvUniqueID + tvResponse4: null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:5A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - If (index > 0 && index < 10): null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - Else If (index >= 10 && index < 100): null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - macAddress = ","TVMACAddress":"1C:" + index % 10 + "A:6B:B5:C5:7F"": null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - return macAddress: null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - tvSerialNumber = ","TVSerialNumber":"FZ1A16140605" + index + """: null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - return tvSerialNumber: Delayed 1 second(s)
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - println("tvDiscovery:" + tvDiscovery): null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - ro.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(tvDiscovery)): null
+
+2018-11-13 10:45:29 - [TEST_STEP][PASSED] - Statement - response = com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.sendRequest(ro): Send request successfully
+
+2018-11-13 10:45:30 - [MESSAGE][PASSED] - Send request successfully
+
+2018-11-13 10:45:30 - [TEST_STEP][PASSED] - Statement - responseStatusCode = response.getStatusCode(): null
+
+2018-11-13 10:45:30 - [TEST_STEP][PASSED] - Statement - println("Response status code:" + responseStatusCode): null
+
+2018-11-13 10:45:30 - [TEST_STEP][PASSED] - delay: Delayed 1 second(s)
+
+2018-11-13 10:45:31 - [MESSAGE][PASSED] - Delayed 1 second(s)]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2018-11-13 10:43:54 - [TEST_SUITE][PASSED] - seneManyTv: Test Cases/sendTvdiscoveryMany]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

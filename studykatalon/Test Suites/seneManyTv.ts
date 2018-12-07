@@ -4,7 +4,7 @@
    <name>seneManyTv</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-11-05T16:54:54</lastRun>
+   <lastRun>2018-11-16T10:30:10</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>

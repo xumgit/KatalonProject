@@ -56,12 +56,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>tv discovery frequency time(seconds)</description>
-      <initValue>3</initValue>
+      <initValue>1</initValue>
       <name>tvDiscoveryFrequency</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>how many tv want to discovery</description>
-      <initValue>6</initValue>
+      <initValue>60</initValue>
       <name>tvDiscoveryCount</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
